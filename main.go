@@ -30,7 +30,7 @@ func main() {
 	collection_name := "vehicles_" + strconv.FormatInt(time.Now().Unix(), 10)
 
 	//Prepare to start iterating 100 vehicles at a time
-	offset := 99500
+	offset := 0
 
 	//Iterate until we get an empty list of vehicles
 	for {
