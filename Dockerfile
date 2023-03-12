@@ -9,6 +9,6 @@ RUN go mod download
 
 COPY *.go ./
 
-RUN go build -o /pi
+RUN go build -o /auto
 
-CMD ["/pi"]
+CMD ["/auto"]
