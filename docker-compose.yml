@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  mongodb:
+    image: "mongo"
+    container_name: "mongodbcontainer"
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodata:/data/db
+    networks:
+      - mongo-net
+
+  auto:
+    image: "auto:latest"
+    build: .
+    container_name: "autocontainer"
+    depends_on:
+      - mongodb
+    networks:
+      - mongo-net
+
+volumes:
+  mongodata:
+
+networks:
+  mongo-net:
