@@ -1,4 +1,4 @@
-# autotrader-crawler
+# car-scraper
 
 ## Quick Start
 
